@@ -1,0 +1,37 @@
+<div class = "header">
+<div layout="row" layout-align="center center">
+  <div  [innerHTML] = "setObj.title" class = "title"></div>
+</div>
+<md-card class = "card" style = "width:82%;margin-left: 7%;margin-top:3%">
+  <md-card-content>
+    <p class= "desc" [innerHTML] = "setObj.description"></p> <br>
+    <form #storyForm="ngForm" (ngSubmit)="onStorySubmit(storyForm.value, setObj.id)">
+      <md-input placeholder="Answer" name="answer" type = "text" style="width: 100%" required ngModel></md-input>
+      <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+        <button md-raised-button color = "accent" style = "background-color: black;"> Submit </button>
+        <!--<button md-raised-button color="warn" style = "margin-left: 10px;"> Hint </button> -->
+      </section>
+        <p *ngIf = '!storyVerify' class = "story-text" style = "margin-top: 3px;"> Wrong answer </p>
+    </form>
+ </md-card-content>
+</md-card>
+
+<p class = "hint"> we have some questions for you that will help you in decoding the answer. </p>
+
+<md-card *ngFor = "let question of questionObj" class = "card" style = "margin-top:15px;width:90%;margin-left: 3%;">
+  <md-card-content>
+    <p class = "desc" [innerHTML] = "question.description"></p>
+    <form #questionForm="ngForm" (ngSubmit)="onAnswerSubmit(questionForm.value, question.id)">
+      <div layout = "row" layout-align="center center">
+        <md-input placeholder="Answer" name="answer" type = "text" style="width: 20%" required ngModel></md-input>
+          <button md-raised-button color = "accent" style = "background-color: black;margin-left: 20px;"> Submit </button>
+      </div>
+      <p *ngIf = 'question.id == question_id && !verify' class = "text"> Wrong answer </p>
+    </form>
+  </md-card-content>
+</md-card>
+</div>
+
+
+
+

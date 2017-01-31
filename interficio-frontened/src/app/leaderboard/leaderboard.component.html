@@ -1,0 +1,46 @@
+  
+  <div class = "background"> 
+  <md-card style = "width:81%;margin-left:10%;margin-top: 4%;background-color:rgb(255,253,220);">
+    <md-card-content style = "width: 100%;margin-left: 0%;">
+      <table border=1 frame=void rules=rows style="width:100%">
+        <thead style = "background-color: rgb(1,94,57);color: white">
+           <th class="text-center">
+            Rank
+          </th>
+          <th style="padding:16px;" class="text-center">
+            Name
+          </th>
+          <th class="text-center">
+            Current Set
+          </th>
+          <th class="text-center">
+            Score
+          </th>
+          <th class="text-center">
+            Date (Last Set Solved)
+          </th>
+        </thead>
+        <tbody style="text-align:-webkit-center">
+        <tr *ngFor="let user of users">
+          <td class = "data">
+            {{ user.rank }}
+            </td>
+         <td class = "data">
+            {{user.name}}
+            </td>
+          <td class = "data">
+            {{user.story_id}}
+          </td>
+          <td class = "data">
+            {{user.score}}
+          </td>
+          <td class = "data">
+            {{user.date}}
+          </td>
+        </tbody>
+      </table>
+    </md-card-content>
+  </md-card>
+  <br>
+ <br>
+ </div>

@@ -1,0 +1,67 @@
+.text {
+   color: #333;
+    font-size: 22px;
+    text-align: center;
+    font-family: 'MyWebFont';
+    margin-right: 98px;
+}
+
+.story-text {
+  color: #333;
+  font-size: 22px;
+  text-align: center;
+  font-family: 'MyWebFont';
+  position: relative;
+  left: 3px;
+  top: 5px;
+}
+
+@font-face {
+  font-family: 'MyWebFont';
+  src:  url('src/assets/skins/lightgray/fonts/heading.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'title';
+  src:  url('src/assets/skins/lightgray/fonts/duetch.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'QuesFont';
+  src:  url('src/assets/skins/lightgray/fonts/BLKCHCRY.woff') format('woff');
+}
+
+.title {
+    font-family: 'QuesFont', Fallback, sans-serif;
+    text-align: center;
+    font-size: 45px;
+    color: white;
+    letter-spacing: 2px;
+    background-color: rgba(128, 128, 128, 0.57);
+    /*margin-left: 35%;*/
+    display: inline;
+}
+
+.desc {
+    font-family: 'QuesFont';
+    font-size: 25px;
+}
+
+.card {
+    background-color: rgba(204, 204, 204, 0.7);
+} 
+
+.hint {
+  font-size:30px;
+  letter-spacing: 1px;
+  font-family: 'MyWebFont';
+  color:white;
+  margin-left: 3%;
+  margin-top: 2%;
+}
+
+.header {
+   background-image: url("src/assets/img/back4.jpg"); 
+   background-repeat: no-repeat;
+   background-size: 100% 100%;
+}

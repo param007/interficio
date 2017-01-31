@@ -1,0 +1,35 @@
+.md-header {
+  color: rgba(0,0,0,0.54);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: .01em;
+  line-height: 1.2em;
+}
+
+.md-list-item {
+  width: 100%
+}
+
+.md-list-text {
+  width: 100%
+}
+td {
+font-size: 17px;
+padding: 15px;
+}
+th {
+  font-size: 18px;
+}
+
+.data {
+    font-size: 17px;
+    padding: 8px;
+}
+
+.background {
+background-color: rgb(18,18,18);
+background-size: 100vw 100vh;
+background-attachment: fixed;
+overflow: hidden;
+display: block;
+}
